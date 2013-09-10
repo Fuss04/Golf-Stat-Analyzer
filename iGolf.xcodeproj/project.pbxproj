@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C64CE731171DCDC400DEA5A8 /* TableOfStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CE730171DCDC400DEA5A8 /* TableOfStats.m */; };
+		C64CE734171DD9F100DEA5A8 /* DisplayStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CE733171DD9F100DEA5A8 /* DisplayStatViewController.m */; };
+		C64CE737171E076300DEA5A8 /* HoleTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CE736171E076300DEA5A8 /* HoleTableController.m */; };
+		C64CE73D171E4C4100DEA5A8 /* HoleInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CE73C171E4C4100DEA5A8 /* HoleInputController.m */; };
+		C65FDC1D1728837800C0652A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FDC1C1728837800C0652A /* Icon.png */; };
+		C65FDC201728958700C0652A /* Hole.m in Sources */ = {isa = PBXBuildFile; fileRef = C65FDC1F1728958700C0652A /* Hole.m */; };
+		C6A69B47171680A100589040 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A69B46171680A100589040 /* Course.m */; };
+		C6A69B4D1716881000589040 /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A69B4C1716881000589040 /* Round.m */; };
+		C6AA449916F98F2D00796275 /* StatisticAnlaysis.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AA449816F98F2D00796275 /* StatisticAnlaysis.m */; };
+		C6BD7EED17224A0F00B7C668 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BD7EEC17224A0F00B7C668 /* Singleton.m */; };
+		C6E532C81723B29100442CBE /* CourseSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E532C71723B29100442CBE /* CourseSelectionController.m */; };
+		C6E532CB1723C25900442CBE /* MasterTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E532CA1723C25900442CBE /* MasterTabController.m */; };
+		C6F256EF16F8E4F0001839F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F256EE16F8E4F0001839F7 /* UIKit.framework */; };
+		C6F256F116F8E4F0001839F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F256F016F8E4F0001839F7 /* Foundation.framework */; };
+		C6F256F316F8E4F0001839F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F256F216F8E4F0001839F7 /* CoreGraphics.framework */; };
+		C6F256F916F8E4F0001839F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6F256F716F8E4F0001839F7 /* InfoPlist.strings */; };
+		C6F256FB16F8E4F0001839F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F256FA16F8E4F0001839F7 /* main.m */; };
+		C6F256FF16F8E4F0001839F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F256FE16F8E4F0001839F7 /* AppDelegate.m */; };
+		C6F2570116F8E4F0001839F7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2570016F8E4F0001839F7 /* Default.png */; };
+		C6F2570316F8E4F0001839F7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2570216F8E4F0001839F7 /* Default@2x.png */; };
+		C6F2570516F8E4F0001839F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2570416F8E4F0001839F7 /* Default-568h@2x.png */; };
+		C6F2570816F8E4F0001839F7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F2570616F8E4F0001839F7 /* MainStoryboard.storyboard */; };
+		C6F2570D16F8E4F0001839F7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2570C16F8E4F0001839F7 /* first.png */; };
+		C6F2570F16F8E4F0001839F7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2570E16F8E4F0001839F7 /* first@2x.png */; };
+		C6F2571416F8E4F0001839F7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2571316F8E4F0001839F7 /* second.png */; };
+		C6F2571616F8E4F0001839F7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2571516F8E4F0001839F7 /* second@2x.png */; };
+		C6F2571E16F8E4F0001839F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F2571D16F8E4F0001839F7 /* SenTestingKit.framework */; };
+		C6F2571F16F8E4F0001839F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F256EE16F8E4F0001839F7 /* UIKit.framework */; };
+		C6F2572016F8E4F0001839F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F256F016F8E4F0001839F7 /* Foundation.framework */; };
+		C6F2572816F8E4F0001839F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6F2572616F8E4F0001839F7 /* InfoPlist.strings */; };
+		C6F2572B16F8E4F0001839F7 /* iGolfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2572A16F8E4F0001839F7 /* iGolfTests.m */; };
+		C6F55B83171F2D4500D2D6A3 /* AddCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F55B82171F2D4500D2D6A3 /* AddCourseController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6F2572116F8E4F0001839F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6F256E316F8E4F0001839F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6F256EA16F8E4F0001839F7;
+			remoteInfo = iGolf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C64CE72F171DCDC400DEA5A8 /* TableOfStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableOfStats.h; sourceTree = "<group>"; };
+		C64CE730171DCDC400DEA5A8 /* TableOfStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableOfStats.m; sourceTree = "<group>"; };
+		C64CE732171DD9F100DEA5A8 /* DisplayStatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayStatViewController.h; sourceTree = "<group>"; };
+		C64CE733171DD9F100DEA5A8 /* DisplayStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayStatViewController.m; sourceTree = "<group>"; };
+		C64CE735171E076300DEA5A8 /* HoleTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoleTableController.h; sourceTree = "<group>"; };
+		C64CE736171E076300DEA5A8 /* HoleTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoleTableController.m; sourceTree = "<group>"; };
+		C64CE73B171E4C4100DEA5A8 /* HoleInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoleInputController.h; sourceTree = "<group>"; };
+		C64CE73C171E4C4100DEA5A8 /* HoleInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoleInputController.m; sourceTree = "<group>"; };
+		C65FDC1C1728837800C0652A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C65FDC1E1728958700C0652A /* Hole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hole.h; sourceTree = "<group>"; };
+		C65FDC1F1728958700C0652A /* Hole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hole.m; sourceTree = "<group>"; };
+		C6A69B45171680A100589040 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		C6A69B46171680A100589040 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		C6A69B4B1716881000589040 /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Round.h; sourceTree = "<group>"; };
+		C6A69B4C1716881000589040 /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Round.m; sourceTree = "<group>"; };
+		C6AA449716F98F2D00796275 /* StatisticAnlaysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticAnlaysis.h; sourceTree = "<group>"; };
+		C6AA449816F98F2D00796275 /* StatisticAnlaysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticAnlaysis.m; sourceTree = "<group>"; };
+		C6BD7EEB17224A0F00B7C668 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		C6BD7EEC17224A0F00B7C668 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		C6E532C61723B29100442CBE /* CourseSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseSelectionController.h; sourceTree = "<group>"; };
+		C6E532C71723B29100442CBE /* CourseSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseSelectionController.m; sourceTree = "<group>"; };
+		C6E532C91723C25900442CBE /* MasterTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTabController.h; sourceTree = "<group>"; };
+		C6E532CA1723C25900442CBE /* MasterTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTabController.m; sourceTree = "<group>"; };
+		C6F256EB16F8E4F0001839F7 /* iGolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F256EE16F8E4F0001839F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C6F256F016F8E4F0001839F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6F256F216F8E4F0001839F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C6F256F616F8E4F0001839F7 /* iGolf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iGolf-Info.plist"; sourceTree = "<group>"; };
+		C6F256F816F8E4F0001839F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6F256FA16F8E4F0001839F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6F256FC16F8E4F0001839F7 /* iGolf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iGolf-Prefix.pch"; sourceTree = "<group>"; };
+		C6F256FD16F8E4F0001839F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C6F256FE16F8E4F0001839F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C6F2570016F8E4F0001839F7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C6F2570216F8E4F0001839F7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C6F2570416F8E4F0001839F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C6F2570716F8E4F0001839F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C6F2570C16F8E4F0001839F7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		C6F2570E16F8E4F0001839F7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		C6F2571316F8E4F0001839F7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		C6F2571516F8E4F0001839F7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C6F2571C16F8E4F0001839F7 /* iGolfTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iGolfTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F2571D16F8E4F0001839F7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C6F2572516F8E4F0001839F7 /* iGolfTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iGolfTests-Info.plist"; sourceTree = "<group>"; };
+		C6F2572716F8E4F0001839F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6F2572916F8E4F0001839F7 /* iGolfTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iGolfTests.h; sourceTree = "<group>"; };
+		C6F2572A16F8E4F0001839F7 /* iGolfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iGolfTests.m; sourceTree = "<group>"; };
+		C6F55B81171F2D4500D2D6A3 /* AddCourseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCourseController.h; sourceTree = "<group>"; };
+		C6F55B82171F2D4500D2D6A3 /* AddCourseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCourseController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6F256E816F8E4F0001839F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F256EF16F8E4F0001839F7 /* UIKit.framework in Frameworks */,
+				C6F256F116F8E4F0001839F7 /* Foundation.framework in Frameworks */,
+				C6F256F316F8E4F0001839F7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F2571816F8E4F0001839F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F2571E16F8E4F0001839F7 /* SenTestingKit.framework in Frameworks */,
+				C6F2571F16F8E4F0001839F7 /* UIKit.framework in Frameworks */,
+				C6F2572016F8E4F0001839F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6F256E216F8E4F0001839F7 = {
+			isa = PBXGroup;
+			children = (
+				C65FDC1C1728837800C0652A /* Icon.png */,
+				C6F256F416F8E4F0001839F7 /* iGolf */,
+				C6F2572316F8E4F0001839F7 /* iGolfTests */,
+				C6F256ED16F8E4F0001839F7 /* Frameworks */,
+				C6F256EC16F8E4F0001839F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6F256EC16F8E4F0001839F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6F256EB16F8E4F0001839F7 /* iGolf.app */,
+				C6F2571C16F8E4F0001839F7 /* iGolfTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6F256ED16F8E4F0001839F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6F256EE16F8E4F0001839F7 /* UIKit.framework */,
+				C6F256F016F8E4F0001839F7 /* Foundation.framework */,
+				C6F256F216F8E4F0001839F7 /* CoreGraphics.framework */,
+				C6F2571D16F8E4F0001839F7 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6F256F416F8E4F0001839F7 /* iGolf */ = {
+			isa = PBXGroup;
+			children = (
+				C65FDC1E1728958700C0652A /* Hole.h */,
+				C65FDC1F1728958700C0652A /* Hole.m */,
+				C6A69B4B1716881000589040 /* Round.h */,
+				C6A69B4C1716881000589040 /* Round.m */,
+				C6A69B45171680A100589040 /* Course.h */,
+				C6A69B46171680A100589040 /* Course.m */,
+				C6AA449716F98F2D00796275 /* StatisticAnlaysis.h */,
+				C6AA449816F98F2D00796275 /* StatisticAnlaysis.m */,
+				C6F256FD16F8E4F0001839F7 /* AppDelegate.h */,
+				C6F256FE16F8E4F0001839F7 /* AppDelegate.m */,
+				C6E532C91723C25900442CBE /* MasterTabController.h */,
+				C6E532CA1723C25900442CBE /* MasterTabController.m */,
+				C6F2570616F8E4F0001839F7 /* MainStoryboard.storyboard */,
+				C6BD7EEB17224A0F00B7C668 /* Singleton.h */,
+				C6BD7EEC17224A0F00B7C668 /* Singleton.m */,
+				C6E532C61723B29100442CBE /* CourseSelectionController.h */,
+				C6E532C71723B29100442CBE /* CourseSelectionController.m */,
+				C6F55B81171F2D4500D2D6A3 /* AddCourseController.h */,
+				C6F55B82171F2D4500D2D6A3 /* AddCourseController.m */,
+				C64CE735171E076300DEA5A8 /* HoleTableController.h */,
+				C64CE736171E076300DEA5A8 /* HoleTableController.m */,
+				C64CE73B171E4C4100DEA5A8 /* HoleInputController.h */,
+				C64CE73C171E4C4100DEA5A8 /* HoleInputController.m */,
+				C64CE732171DD9F100DEA5A8 /* DisplayStatViewController.h */,
+				C64CE733171DD9F100DEA5A8 /* DisplayStatViewController.m */,
+				C64CE72F171DCDC400DEA5A8 /* TableOfStats.h */,
+				C64CE730171DCDC400DEA5A8 /* TableOfStats.m */,
+				C6F256F516F8E4F0001839F7 /* Supporting Files */,
+			);
+			path = iGolf;
+			sourceTree = "<group>";
+		};
+		C6F256F516F8E4F0001839F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6F256F616F8E4F0001839F7 /* iGolf-Info.plist */,
+				C6F256F716F8E4F0001839F7 /* InfoPlist.strings */,
+				C6F256FA16F8E4F0001839F7 /* main.m */,
+				C6F2570C16F8E4F0001839F7 /* first.png */,
+				C6F2570E16F8E4F0001839F7 /* first@2x.png */,
+				C6F2571316F8E4F0001839F7 /* second.png */,
+				C6F2571516F8E4F0001839F7 /* second@2x.png */,
+				C6F256FC16F8E4F0001839F7 /* iGolf-Prefix.pch */,
+				C6F2570016F8E4F0001839F7 /* Default.png */,
+				C6F2570216F8E4F0001839F7 /* Default@2x.png */,
+				C6F2570416F8E4F0001839F7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6F2572316F8E4F0001839F7 /* iGolfTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6F2572916F8E4F0001839F7 /* iGolfTests.h */,
+				C6F2572A16F8E4F0001839F7 /* iGolfTests.m */,
+				C6F2572416F8E4F0001839F7 /* Supporting Files */,
+			);
+			path = iGolfTests;
+			sourceTree = "<group>";
+		};
+		C6F2572416F8E4F0001839F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6F2572516F8E4F0001839F7 /* iGolfTests-Info.plist */,
+				C6F2572616F8E4F0001839F7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6F256EA16F8E4F0001839F7 /* iGolf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6F2572E16F8E4F0001839F7 /* Build configuration list for PBXNativeTarget "iGolf" */;
+			buildPhases = (
+				C6F256E716F8E4F0001839F7 /* Sources */,
+				C6F256E816F8E4F0001839F7 /* Frameworks */,
+				C6F256E916F8E4F0001839F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iGolf;
+			productName = iGolf;
+			productReference = C6F256EB16F8E4F0001839F7 /* iGolf.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6F2571B16F8E4F0001839F7 /* iGolfTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6F2573116F8E4F0001839F7 /* Build configuration list for PBXNativeTarget "iGolfTests" */;
+			buildPhases = (
+				C6F2571716F8E4F0001839F7 /* Sources */,
+				C6F2571816F8E4F0001839F7 /* Frameworks */,
+				C6F2571916F8E4F0001839F7 /* Resources */,
+				C6F2571A16F8E4F0001839F7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6F2572216F8E4F0001839F7 /* PBXTargetDependency */,
+			);
+			name = iGolfTests;
+			productName = iGolfTests;
+			productReference = C6F2571C16F8E4F0001839F7 /* iGolfTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6F256E316F8E4F0001839F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jacob Fuss";
+			};
+			buildConfigurationList = C6F256E616F8E4F0001839F7 /* Build configuration list for PBXProject "iGolf" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6F256E216F8E4F0001839F7;
+			productRefGroup = C6F256EC16F8E4F0001839F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6F256EA16F8E4F0001839F7 /* iGolf */,
+				C6F2571B16F8E4F0001839F7 /* iGolfTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6F256E916F8E4F0001839F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F256F916F8E4F0001839F7 /* InfoPlist.strings in Resources */,
+				C6F2570116F8E4F0001839F7 /* Default.png in Resources */,
+				C6F2570316F8E4F0001839F7 /* Default@2x.png in Resources */,
+				C6F2570516F8E4F0001839F7 /* Default-568h@2x.png in Resources */,
+				C6F2570816F8E4F0001839F7 /* MainStoryboard.storyboard in Resources */,
+				C6F2570D16F8E4F0001839F7 /* first.png in Resources */,
+				C6F2570F16F8E4F0001839F7 /* first@2x.png in Resources */,
+				C6F2571416F8E4F0001839F7 /* second.png in Resources */,
+				C6F2571616F8E4F0001839F7 /* second@2x.png in Resources */,
+				C65FDC1D1728837800C0652A /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F2571916F8E4F0001839F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F2572816F8E4F0001839F7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6F2571A16F8E4F0001839F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6F256E716F8E4F0001839F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F256FB16F8E4F0001839F7 /* main.m in Sources */,
+				C6F256FF16F8E4F0001839F7 /* AppDelegate.m in Sources */,
+				C6AA449916F98F2D00796275 /* StatisticAnlaysis.m in Sources */,
+				C6A69B47171680A100589040 /* Course.m in Sources */,
+				C6A69B4D1716881000589040 /* Round.m in Sources */,
+				C64CE731171DCDC400DEA5A8 /* TableOfStats.m in Sources */,
+				C64CE734171DD9F100DEA5A8 /* DisplayStatViewController.m in Sources */,
+				C64CE737171E076300DEA5A8 /* HoleTableController.m in Sources */,
+				C64CE73D171E4C4100DEA5A8 /* HoleInputController.m in Sources */,
+				C6F55B83171F2D4500D2D6A3 /* AddCourseController.m in Sources */,
+				C6BD7EED17224A0F00B7C668 /* Singleton.m in Sources */,
+				C6E532C81723B29100442CBE /* CourseSelectionController.m in Sources */,
+				C6E532CB1723C25900442CBE /* MasterTabController.m in Sources */,
+				C65FDC201728958700C0652A /* Hole.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F2571716F8E4F0001839F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F2572B16F8E4F0001839F7 /* iGolfTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6F2572216F8E4F0001839F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6F256EA16F8E4F0001839F7 /* iGolf */;
+			targetProxy = C6F2572116F8E4F0001839F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C6F256F716F8E4F0001839F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6F256F816F8E4F0001839F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6F2570616F8E4F0001839F7 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6F2570716F8E4F0001839F7 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		C6F2572616F8E4F0001839F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6F2572716F8E4F0001839F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6F2572C16F8E4F0001839F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6F2572D16F8E4F0001839F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6F2572F16F8E4F0001839F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGolf/iGolf-Prefix.pch";
+				INFOPLIST_FILE = "iGolf/iGolf-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6F2573016F8E4F0001839F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGolf/iGolf-Prefix.pch";
+				INFOPLIST_FILE = "iGolf/iGolf-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C6F2573216F8E4F0001839F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iGolf.app/iGolf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGolf/iGolf-Prefix.pch";
+				INFOPLIST_FILE = "iGolfTests/iGolfTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C6F2573316F8E4F0001839F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iGolf.app/iGolf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGolf/iGolf-Prefix.pch";
+				INFOPLIST_FILE = "iGolfTests/iGolfTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6F256E616F8E4F0001839F7 /* Build configuration list for PBXProject "iGolf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F2572C16F8E4F0001839F7 /* Debug */,
+				C6F2572D16F8E4F0001839F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6F2572E16F8E4F0001839F7 /* Build configuration list for PBXNativeTarget "iGolf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F2572F16F8E4F0001839F7 /* Debug */,
+				C6F2573016F8E4F0001839F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6F2573116F8E4F0001839F7 /* Build configuration list for PBXNativeTarget "iGolfTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F2573216F8E4F0001839F7 /* Debug */,
+				C6F2573316F8E4F0001839F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6F256E316F8E4F0001839F7 /* Project object */;
+}
