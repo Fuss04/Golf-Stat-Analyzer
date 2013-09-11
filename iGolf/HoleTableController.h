@@ -7,17 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
-#import "Round.h"
-#import "HoleInputController.h"
-#import "Hole.h"
 
-@interface HoleTableController : UIViewController <UITableViewDelegate, UITableViewDataSource, HoleInputControllerDelegate>{
-    Singleton *singleton;
-    Round     *new_round;
-    Hole      *new_hole;
-    NSInteger hole_number;
-}
+@class Hole;
+@class Singleton;
+@class Round;
+@class HoleInputController;
+
+@interface HoleTableController : UIViewController <UITableViewDelegate, UITableViewDataSource, HoleInputControllerDelegate>
 
 @property (nonatomic, retain)          NSMutableDictionary *hole_stat;
 @property (nonatomic, retain)          NSArray             *num_hole;
@@ -29,6 +25,11 @@
 @property (nonatomic, assign)          NSInteger           greens;
 @property (nonatomic, assign)          NSString            *course_name;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem     *save_button;
+@property (nonatomic, assign)          NSInteger           hole_number;
+@property (nonatomic, strong)          Round               *new_round;
+@property (nonatomic, strong)          Hole                *new_hole;
+@property (nonatomic, strong)          Singleton           *singleton;
+
 
 - (void) setupDataSources;
 

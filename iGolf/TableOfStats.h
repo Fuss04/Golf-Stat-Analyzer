@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StatisticAnlaysis.h"
-#import "Singleton.h"
 
-@interface TableOfStats : UIViewController <UITableViewDelegate, UITableViewDataSource> {
-    
-}
+@class Singleton;
+@class StatisticAnlaysis;
+
+@interface TableOfStats : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, retain) Singleton           *singleton;
 @property (nonatomic, retain) StatisticAnlaysis   *stats;

@@ -9,12 +9,9 @@
 #import "CourseSelectionController.h"
 #import "AddCourseController.h"
 #import "HoleTableController.h"
+#import "Singleton.h"
 
 @implementation CourseSelectionController
-
-@synthesize add_course;
-@synthesize table_view;
-@synthesize data_array;
 
 /**
  Returns an NSViewController object initialized to the nib file in the specified bundle
@@ -53,8 +50,8 @@
     
     [alert show];
  
-    singleton = [Singleton sharedManager];
-    data_array = [singleton.player_data allKeys];
+    self.singleton = [Singleton sharedManager];
+    self.data_array = [self.singleton.player_data allKeys];
 }
 
 
@@ -74,10 +71,10 @@
  */
 - (void) viewWillAppear:(BOOL)animated{
     
-    singleton = [Singleton sharedManager];
-    data_array = [singleton.player_data allKeys];
+    self.singleton = [Singleton sharedManager];
+    self.data_array = [self.singleton.player_data allKeys];
     
-    [table_view reloadData];
+    [self.table_view reloadData];
     
     [super viewWillAppear:animated];    
 }
@@ -109,9 +106,9 @@
  */
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {    
-    singleton = [Singleton sharedManager];
+    self.singleton = [Singleton sharedManager];
 
-    return [data_array count];
+    return [self.data_array count];
 }
 
 
@@ -135,7 +132,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [data_array objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.data_array objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -162,7 +159,7 @@
  */
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     HoleTableController *hole_table = [self.storyboard instantiateViewControllerWithIdentifier:@"hole_table"];
-    hole_table.course_name = [data_array objectAtIndex:indexPath.row];
+    hole_table.course_name = [self.data_array objectAtIndex:indexPath.row];
     [self presentViewController:hole_table animated:YES completion:nil];
 }
 

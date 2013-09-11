@@ -7,10 +7,7 @@
 //
 
 #import "MasterTabController.h"
-
-@interface MasterTabController ()
-
-@end
+#import "Singleton.h"
 
 @implementation MasterTabController
 
@@ -28,7 +25,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    singleton = [Singleton sharedManager];
+    self.singleton = [Singleton sharedManager];
 }
 
 - (void)didReceiveMemoryWarning

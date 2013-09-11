@@ -7,15 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Round.h"
 
-@interface Course : NSObject{
-    NSMutableArray  *rounds_for_course;
-    NSMutableArray  *scorecard;
-    NSString        *course_name;
-    NSInteger       course_rating;
-    NSInteger       course_slope;
-}
+@class Round;
+
+@interface Course : NSObject
 
 @property (nonatomic, retain) NSMutableArray  *rounds_for_course;
 @property (nonatomic, retain) NSMutableArray  *scorecard;

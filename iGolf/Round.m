@@ -7,6 +7,7 @@
 //
 
 #import "Round.h"
+#import "Hole.h"
 
 @interface Round()
     

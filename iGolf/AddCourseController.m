@@ -8,24 +8,9 @@
 
 #import "AddCourseController.h"
 #import "Course.h"
-
-@interface AddCourseController ()
-
-@end
+#import "Singleton.h"
 
 @implementation AddCourseController
-
-@synthesize course_name_label;
-@synthesize course_rating_label;
-@synthesize course_slope_label;
-@synthesize course_name_field;
-@synthesize course_rating_field;
-@synthesize course_slope_field;
-@synthesize save_button;
-@synthesize clear_button;
-@synthesize name;
-@synthesize slope;
-@synthesize rating;
 
 
 /**
@@ -56,15 +41,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    course_name_label.text = @"Course Name";
-    course_rating_label.text = @"Course Rating";
-    course_slope_label.text = @"Course Slope";
+    self.course_name_label.text = @"Course Name";
+    self.course_rating_label.text = @"Course Rating";
+    self.course_slope_label.text = @"Course Slope";
     
-    course_name_field.delegate = self;
-    course_rating_field.delegate = self;
-    course_slope_field.delegate = self;
+    self.course_name_field.delegate = self;
+    self.course_rating_field.delegate = self;
+    self.course_slope_field.delegate = self;
     
-    singleton = [Singleton sharedManager];
+    self.singleton = [Singleton sharedManager];
 }
 
 
@@ -103,9 +88,9 @@
  */
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [course_slope_field resignFirstResponder];
-    [course_rating_field resignFirstResponder];
-    [course_name_field resignFirstResponder];
+    [self.course_slope_field resignFirstResponder];
+    [self.course_rating_field resignFirstResponder];
+    [self.course_name_field resignFirstResponder];
 }
 
 
@@ -116,21 +101,21 @@
  @return
  */
 - (IBAction) save_button:(id)sender{
-    name   = [course_name_field text];
-    slope  = [NSNumber numberWithInteger:[course_slope_field.text integerValue]];
-    rating = [NSNumber numberWithInteger:[course_rating_field.text integerValue]];
+    self.name   = [self.course_name_field text];
+    self.slope  = [NSNumber numberWithInteger:[self.course_slope_field.text integerValue]];
+    self.rating = [NSNumber numberWithInteger:[self.course_rating_field.text integerValue]];
     
     // Create and add course to singleton
-    name = course_name_field.text;
-    slope = [NSNumber numberWithInteger:[course_slope_field.text integerValue]];
-    rating = [NSNumber numberWithInteger:[course_rating_field.text integerValue]];
-    Course *new_course = [[Course alloc] initWith:name difficulty:(int)slope and:(int)rating];
-    [singleton.player_data setObject:new_course forKey:name];
+    self.name = self.course_name_field.text;
+    self.slope = [NSNumber numberWithInteger:[self.course_slope_field.text integerValue]];
+    self.rating = [NSNumber numberWithInteger:[self.course_rating_field.text integerValue]];
+    Course *new_course = [[Course alloc] initWith:self.name difficulty:(int)self.slope and:(int)self.rating];
+    [self.singleton.player_data setObject:new_course forKey:self.name];
     
     // Clear the text fields
-    course_name_field.text   = @"";
-    course_slope_field.text  = @"";
-    course_rating_field.text = @"";
+    self.course_name_field.text   = @"";
+    self.course_slope_field.text  = @"";
+    self.course_rating_field.text = @"";
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -143,9 +128,9 @@
  @return
  */
 - (IBAction)cancel_button:(id)sender{
-    course_name_field.text   = @"";
-    course_slope_field.text  = @"";
-    course_rating_field.text = @"";
+    self.course_name_field.text   = @"";
+    self.course_slope_field.text  = @"";
+    self.course_rating_field.text = @"";
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

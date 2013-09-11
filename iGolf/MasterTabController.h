@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
 
-@interface MasterTabController : UITabBarController {
-    Singleton *singleton;
-}
+@class Singleton;
+
+@interface MasterTabController : UITabBarController
+
+@property (nonatomic, strong) Singleton *singleton;
 
 @end

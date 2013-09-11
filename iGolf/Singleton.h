@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Singleton : NSObject{
-    
-}
+@interface Singleton : NSObject
 
 @property (nonatomic, retain) NSMutableDictionary *player_data;
 

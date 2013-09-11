@@ -7,17 +7,9 @@
 //
 
 #import "Course.h"
+#import "Round.h"
 
 @implementation Course
-
-
-// Getter and Setter methods
-// @note The methods are created by the complier
-@synthesize course_name;
-@synthesize rounds_for_course;
-@synthesize scorecard;
-@synthesize course_rating;
-@synthesize course_slope;
 
 
 /**
@@ -36,11 +28,11 @@
     self = [super init];
     
     if (self) {
-        course_name       = name;
-        course_rating     = rating;
-        course_slope      = slope;
-        rounds_for_course = [[NSMutableArray alloc] init];
-        scorecard         = [[NSMutableArray alloc] init];
+        self.course_name       = name;
+        self.course_rating     = rating;
+        self.course_slope      = slope;
+        self.rounds_for_course = [[NSMutableArray alloc] init];
+        self.scorecard         = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -54,11 +46,11 @@
     self = [super init];
     
     if(self) {
-        course_name       = nil;
-        course_rating     = 0;
-        course_slope      = 0;
-        rounds_for_course = [[NSMutableArray alloc] init];
-        scorecard         = [[NSMutableArray alloc] init];
+        self.course_name       = nil;
+        self.course_rating     = 0;
+        self.course_slope      = 0;
+        self.rounds_for_course = [[NSMutableArray alloc] init];
+        self.scorecard         = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -85,7 +77,7 @@ toRoundWithNumber:(NSInteger)putts
 andNumberOfGreens:(NSInteger)in_regulation{
     
     // Create new a new round
-    Round *new_round = [[Round alloc] initWith:course_name
+    Round *new_round = [[Round alloc] initWith:self.course_name
                                numberOfStrokes:score
                                       numberOf:putts
                                withNumberOfHit:fairways
@@ -93,7 +85,7 @@ andNumberOfGreens:(NSInteger)in_regulation{
                              andNumberOfGreens:in_regulation];
     
     // Adds the new_round to the array of rounds
-    [rounds_for_course addObject:new_round];
+    [self.rounds_for_course addObject:new_round];
 }
 
 
@@ -103,7 +95,7 @@ andNumberOfGreens:(NSInteger)in_regulation{
  @param new_round
  */
 - (void) addRound:(Round *)new_round{
-    [rounds_for_course addObject:new_round];
+    [self.rounds_for_course addObject:new_round];
 }
 
 @end

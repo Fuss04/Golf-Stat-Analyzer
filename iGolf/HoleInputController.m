@@ -9,36 +9,7 @@
 #import "HoleInputController.h"
 #import "HoleTableController.h"
 
-@interface HoleInputController ()
-
-@end
-
 @implementation HoleInputController
-
-@synthesize stat_name;
-@synthesize stat_name_label;
-
-// Getter and setters for steppers
-@synthesize putt_stepper;
-@synthesize stroke_stepper;
-@synthesize fairway_stepper;
-@synthesize penalty_stepper;
-@synthesize green_stepper;
-
-// Getter and setters for stepper labels
-@synthesize putt_stepper_label;
-@synthesize fairway_stepper_label;
-@synthesize penalty_stepper_label;
-@synthesize green_stepper_label;
-@synthesize stroke_stepper_label;
-
-@synthesize delegate;
-
-@synthesize putt_nummber;
-@synthesize penalty_number;
-@synthesize stroke_number;
-@synthesize green_number;
-@synthesize fairway_number;
 
 
 /**
@@ -69,12 +40,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.stat_name_label.text     = stat_name;
-    self.putt_stepper_label.text    = putt_nummber;
-    self.fairway_stepper_label.text = fairway_number;
-    self.penalty_stepper_label.text = penalty_number;
-    self.green_stepper_label.text   = green_number;
-    self.stroke_stepper_label.text  = stroke_number;
+    self.stat_name_label.text       = self.stat_name;
+    self.putt_stepper_label.text    = self.putt_nummber;
+    self.fairway_stepper_label.text = self.fairway_number;
+    self.penalty_stepper_label.text = self.penalty_number;
+    self.green_stepper_label.text   = self.green_number;
+    self.stroke_stepper_label.text  = self.stroke_number;
 }
 
 
@@ -97,7 +68,7 @@
             Changes the putt label
  */
 - (IBAction) putt_value_changed:(id)sender {
-    self.putt_stepper_label.text = [NSString stringWithFormat:@"%d", (int)putt_stepper.value];
+    self.putt_stepper_label.text = [NSString stringWithFormat:@"%d", (int)self.putt_stepper.value];
 }
 
 
@@ -110,7 +81,7 @@
             Changes the fairway label
  */
 - (IBAction) fairway_value_changed:(id)sender{
-    self.fairway_stepper_label.text = [NSString stringWithFormat:@"%d", (int)fairway_stepper.value];
+    self.fairway_stepper_label.text = [NSString stringWithFormat:@"%d", (int)self.fairway_stepper.value];
 }
 
 
@@ -123,7 +94,7 @@
             Changes the penalty label
  */
 - (IBAction) penalty_value_changed:(id)sender{
-    self.penalty_stepper_label.text = [NSString stringWithFormat:@"%d", (int)penalty_stepper.value];
+    self.penalty_stepper_label.text = [NSString stringWithFormat:@"%d", (int)self.penalty_stepper.value];
 }
 
 
@@ -136,7 +107,7 @@
             Changes the green label
  */
 - (IBAction) green_value_changed:(id)sender{
-    self.green_stepper_label.text = [NSString stringWithFormat:@"%d", (int)green_stepper.value];
+    self.green_stepper_label.text = [NSString stringWithFormat:@"%d", (int)self.green_stepper.value];
 }
 
 
@@ -149,7 +120,7 @@
             Changes the stoke label
  */
 -  (IBAction) stroke_value_changed:(id)sender{
-    self.stroke_stepper_label.text = [NSString stringWithFormat:@"%d", (int)stroke_stepper.value];
+    self.stroke_stepper_label.text = [NSString stringWithFormat:@"%d", (int)self.stroke_stepper.value];
 }
 
 

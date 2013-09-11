@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Hole.h"
+
+@class Hole;
 
 @interface Round : NSObject{
     NSMutableArray  *holes_for_round;

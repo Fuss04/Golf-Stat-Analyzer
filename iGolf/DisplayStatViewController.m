@@ -7,20 +7,10 @@
 //
 
 #import "DisplayStatViewController.h"
-
-@interface DisplayStatViewController ()
-
-@end
+#import "Singleton.h"
+#import "StatisticAnlaysis.h"
 
 @implementation DisplayStatViewController
-
-@synthesize singleton;
-@synthesize stats;
-
-@synthesize stat_title;
-@synthesize stat_value;
-@synthesize stat_title_label;
-@synthesize stat_value_label;
 
 
 /**
@@ -51,8 +41,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.stat_title_label.text = stat_title;
-    self.stat_value_label.text = stat_value;
+    self.stat_title_label.text = self.stat_title;
+    self.stat_value_label.text = self.stat_value;
 }
 
 

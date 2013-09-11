@@ -26,12 +26,6 @@
 
 
 /**
- Getters and Setters for all the variables
- */
-@synthesize lowest_round;
-
-
-/**
  Defualt Constructor for the Statistic Anlaysiser class
  
  @return
@@ -41,7 +35,7 @@
     self = [super init];
     
     if(self){
-        lowest_round =  NSIntegerMax;
+        self.lowest_round =  NSIntegerMax;
     }
     
     return self;
@@ -385,14 +379,14 @@
         for (Round *round in all_scores){
             [round calcTotalForRound];
             
-            if (round.score < lowest_round){
-                lowest_round = round.score;
+            if (round.score < self.lowest_round){
+                self.lowest_round = round.score;
             }
         }
     }
     
-    if (lowest_round == NSIntegerMax) {
-        lowest_round = 0;
+    if (self.lowest_round == NSIntegerMax) {
+        self.lowest_round = 0;
     }
 }
 

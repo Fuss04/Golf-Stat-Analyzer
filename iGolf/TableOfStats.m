@@ -8,17 +8,10 @@
 
 #import "TableOfStats.h"
 #import "DisplayStatViewController.h"
-
-@interface TableOfStats ()
-
-@end
+#import "StatisticAnlaysis.h"
+#import "Singleton.h"
 
 @implementation TableOfStats
-
-@synthesize singleton;
-@synthesize stats;
-@synthesize stat_titles;
-@synthesize stat_values;
 
 
 /**
@@ -26,27 +19,27 @@
  */
 - (void) setupDataSource{
     
-    singleton   = [Singleton sharedManager];
+    self.singleton   = [Singleton sharedManager];
     
-    [stats findLowestRoundToDate:singleton.player_data];
+    [self.stats findLowestRoundToDate:self.singleton.player_data];
     
-    int lowest_round      = stats.lowest_round;
-    int average_round     = [stats calcAverageRoundFrom:singleton.player_data];
-    int average_putts     = [stats calcAveragePuttsFrom:singleton.player_data];
-    int average_fairways  = [stats calcAverageFairwaysFrom:singleton.player_data];
-    int average_penalties = [stats calcAveragePenaltiesFrom:singleton.player_data];
-    int average_greens    = [stats calcAverageGreensFrom:singleton.player_data];
-    int handicap          = [stats calcHandicapFrom:singleton.player_data];
+    int lowest_round      = self.stats.lowest_round;
+    int average_round     = [self.stats calcAverageRoundFrom:self.singleton.player_data];
+    int average_putts     = [self.stats calcAveragePuttsFrom:self.singleton.player_data];
+    int average_fairways  = [self.stats calcAverageFairwaysFrom:self.singleton.player_data];
+    int average_penalties = [self.stats calcAveragePenaltiesFrom:self.singleton.player_data];
+    int average_greens    = [self.stats calcAverageGreensFrom:self.singleton.player_data];
+    int handicap          = [self.stats calcHandicapFrom:self.singleton.player_data];
     
-    [stat_values setValue:[NSString stringWithFormat:@"%d", lowest_round] forKey:@"Lowest Round"];
-    [stat_values setValue:[NSString stringWithFormat:@"%d", average_round] forKey:@"Average Round"];
-    [stat_values setValue:[NSString stringWithFormat:@"%d", average_putts] forKey:@"Average Putts"];
-    [stat_values setValue:[NSString stringWithFormat:@"%d", average_fairways] forKey:@"Average Fairways"];
-    [stat_values setValue:[NSString stringWithFormat:@"%d", average_penalties] forKey:@"Average Penalties"];
-    [stat_values setValue:[NSString stringWithFormat:@"%d", average_greens] forKey:@"Average Greens"];
-    [stat_values setValue:[NSString stringWithFormat:@"%d", handicap] forKey:@"Handicap"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", lowest_round] forKey:@"Lowest Round"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", average_round] forKey:@"Average Round"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", average_putts] forKey:@"Average Putts"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", average_fairways] forKey:@"Average Fairways"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", average_penalties] forKey:@"Average Penalties"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", average_greens] forKey:@"Average Greens"];
+    [self.stat_values setValue:[NSString stringWithFormat:@"%d", handicap] forKey:@"Handicap"];
     
-    stat_titles = [stat_values allKeys];
+    self.stat_titles = [self.stat_values allKeys];
 }
 
 
@@ -77,8 +70,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    stat_values = [[NSMutableDictionary alloc] init];
-    stats       = [[StatisticAnlaysis alloc] init];
+    self.stat_values = [[NSMutableDictionary alloc] init];
+    self.stats       = [[StatisticAnlaysis alloc] init];
     [self setupDataSource];
     //NSLog(@"viewDidLoad: loading dataSource in tableOfStats");
 }
@@ -127,7 +120,7 @@
  */
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [stat_titles count];
+    return [self.stat_titles count];
 }
 
 
@@ -151,7 +144,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [stat_titles objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.stat_titles objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -166,8 +159,8 @@
  */
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     DisplayStatViewController *display_stat = [self.storyboard instantiateViewControllerWithIdentifier:@"display_stat"];
-    display_stat.stat_title = [stat_titles objectAtIndex:indexPath.row];
-    display_stat.stat_value = [stat_values objectForKey:display_stat.stat_title];
+    display_stat.stat_title = [self.stat_titles objectAtIndex:indexPath.row];
+    display_stat.stat_value = [self.stat_values objectForKey:display_stat.stat_title];
     [self.navigationController pushViewController:display_stat animated:YES];
 }
 

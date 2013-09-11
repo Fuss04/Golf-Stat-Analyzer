@@ -11,8 +11,6 @@
 
 @implementation Singleton
 
-@synthesize player_data;
-
 + (id) sharedManager {
     static Singleton *sharedMyManager = nil;
     static dispatch_once_t onceToken;
@@ -26,7 +24,7 @@
 
 - (id) init {
     if (self = [super init]) {
-        player_data = [[NSMutableDictionary alloc] init];
+        self.player_data = [[NSMutableDictionary alloc] init];
     }
     
     return self;

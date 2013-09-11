@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StatisticAnlaysis : NSObject{
-    NSInteger lowest_round;
-}
+@interface StatisticAnlaysis : NSObject
 
 
 @property (nonatomic, assign) NSInteger lowest_round;

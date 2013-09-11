@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
 
-@interface CourseSelectionController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
-    Singleton *singleton;
-}
+@class Singleton;
+
+@interface CourseSelectionController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *add_course;
 @property (nonatomic, strong) IBOutlet UITableView     *table_view;
 @property (nonatomic, retain)          NSArray         *data_array;
+@property (nonatomic, strong)          Singleton       *singleton;
 
 - (IBAction) add_button:(id)sender;
 

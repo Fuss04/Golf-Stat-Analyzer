@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
 
-@interface AddCourseController : UIViewController <UITextFieldDelegate>{
-    Singleton *singleton;
-}
+@class Singleton;
+
+@interface AddCourseController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UILabel             *course_name_label;
 @property (nonatomic, strong) IBOutlet UILabel             *course_slope_label;
@@ -24,6 +23,7 @@
 @property (nonatomic, strong)          NSString            *name;
 @property (nonatomic, strong)          NSNumber            *slope;
 @property (nonatomic, strong)          NSNumber            *rating;
+@property (nonatomic, strong)          Singleton           *singleton;
 
 - (IBAction) save_button:(id)sender;
 
