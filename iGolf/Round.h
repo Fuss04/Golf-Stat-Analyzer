@@ -11,14 +11,7 @@
 @class Hole;
 
 @interface Round : NSObject{
-    NSMutableArray  *holes_for_round;
-    NSString        *course_name;
-    NSInteger       score;
-    NSInteger       putts;
-    NSInteger       fairways;
-    NSInteger       penalties;
-    NSInteger       greens_in_regulation;
-    BOOL            did_count_holes;
+
 }
 
 @property (nonatomic, retain) NSMutableArray *holes_for_round;
@@ -28,6 +21,8 @@
 @property (nonatomic, assign) NSInteger      fairways;
 @property (nonatomic, assign) NSInteger      penalties;
 @property (nonatomic, assign) NSInteger      greens_in_regulation;
+@property (nonatomic, assign) BOOL            did_count_holes;
+
 
 - (id)   initWith:(NSString *)name
   numberOfStrokes:(NSInteger)score_in_round

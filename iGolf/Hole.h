@@ -9,12 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Hole : NSObject{
-    NSInteger score;
-    NSInteger putts;
-    NSInteger fairway;
-    NSInteger penalties;
-    NSInteger green_in_regulation;
-    NSInteger hole_number;
+
 }
 
 @property (nonatomic, assign) NSInteger score;

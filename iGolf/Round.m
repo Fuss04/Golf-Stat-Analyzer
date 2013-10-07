@@ -25,17 +25,6 @@
 
 @implementation Round
 
-// Getter and Setter methods
-// @note The methods are created by the complier
-@synthesize holes_for_round;
-@synthesize course_name;
-@synthesize score;
-@synthesize putts;
-@synthesize fairways;
-@synthesize penalties;
-@synthesize greens_in_regulation;
-
-
 /**
  Constructor for a Round
  
@@ -64,14 +53,14 @@ andNumberOfGreens:(NSInteger)in_regulation {
     self = [super init];
     
     if(self){
-        course_name          = name;
-        score                = score_in_round;
-        putts                = putts_in_round;
-        fairways             = fairways_in_round;
-        penalties            = penalties_in_round;
-        greens_in_regulation = in_regulation;
-        holes_for_round      = [[NSMutableArray alloc] init];
-        did_count_holes      = NO;
+        self.course_name          = name;
+        self.score                = score_in_round;
+        self.putts                = putts_in_round;
+        self.fairways             = fairways_in_round;
+        self.penalties            = penalties_in_round;
+        self.greens_in_regulation = in_regulation;
+        self.holes_for_round      = [[NSMutableArray alloc] init];
+        self.did_count_holes      = NO;
     }
     
     return self;
@@ -85,14 +74,14 @@ andNumberOfGreens:(NSInteger)in_regulation {
     self = [super init];
     
     if(self){
-        course_name          = nil;
-        score                = 0;
-        putts                = 0;
-        fairways             = 0;
-        penalties            = 0;
-        greens_in_regulation = 0;
-        holes_for_round      = [[NSMutableArray alloc] init];
-        did_count_holes      = NO;
+        self.course_name          = nil;
+        self.score                = 0;
+        self.putts                = 0;
+        self.fairways             = 0;
+        self.penalties            = 0;
+        self.greens_in_regulation = 0;
+        self.holes_for_round      = [[NSMutableArray alloc] init];
+        self.did_count_holes      = NO;
     }
     
     return self;
@@ -118,7 +107,7 @@ andNumberOfGreens:(NSInteger)in_regulation {
     
     Hole *new_hole = [[Hole alloc] initWithScore:score_num putts:putts_num fairways:fairway_num penalties:penalties_num andGreens:green_in_reg atHoleNumber:hole_num];
     
-    [holes_for_round addObject:new_hole];
+    [self.holes_for_round addObject:new_hole];
 }
 
 
@@ -126,14 +115,14 @@ andNumberOfGreens:(NSInteger)in_regulation {
  
  */
 - (void) calcTotalForRound{
-    if(did_count_holes == NO){
+    if(self.did_count_holes == NO){
         [self calcTotalScore];
         [self calcTotalPutts];
         [self calcTotalPenalties];
         [self calcTotalGreens];
         [self calcTotalFairway];
         
-        did_count_holes = YES;
+        self.did_count_holes = YES;
     }
 }
 
@@ -142,8 +131,8 @@ andNumberOfGreens:(NSInteger)in_regulation {
  
  */
 - (void) calcTotalScore{
-    for (Hole *hole in holes_for_round) {
-        score += hole.score;
+    for (Hole *hole in self.holes_for_round) {
+        self.score += hole.score;
     }
 }
 
@@ -152,8 +141,8 @@ andNumberOfGreens:(NSInteger)in_regulation {
  
  */
 - (void) calcTotalPutts{
-    for (Hole *hole in holes_for_round) {
-        putts += hole.putts;
+    for (Hole *hole in self.holes_for_round) {
+        self.putts += hole.putts;
     }
 }
 
@@ -161,8 +150,8 @@ andNumberOfGreens:(NSInteger)in_regulation {
  
  */
 - (void) calcTotalFairway{
-    for (Hole *hole in holes_for_round) {
-        fairways += hole.fairway;
+    for (Hole *hole in self.holes_for_round) {
+        self.fairways += hole.fairway;
     }
 }
 
@@ -171,8 +160,8 @@ andNumberOfGreens:(NSInteger)in_regulation {
  
  */
 - (void) calcTotalPenalties{
-    for (Hole *hole in holes_for_round) {
-        penalties += hole.penalties;
+    for (Hole *hole in self.holes_for_round) {
+        self.penalties += hole.penalties;
     }
 }
 
@@ -181,8 +170,8 @@ andNumberOfGreens:(NSInteger)in_regulation {
  
  */
 - (void) calcTotalGreens{
-    for (Hole *hole in holes_for_round) {
-        greens_in_regulation += hole.green_in_regulation;
+    for (Hole *hole in self.holes_for_round) {
+        self.greens_in_regulation += hole.green_in_regulation;
     }
 }
 
@@ -194,7 +183,7 @@ andNumberOfGreens:(NSInteger)in_regulation {
  @return
  */
 - (Hole *) findHoleNumber:(NSInteger)hole_number{
-    for(Hole *hole in holes_for_round){
+    for(Hole *hole in self.holes_for_round){
         if(hole.hole_number == hole_number)
             return hole;
     }
@@ -209,9 +198,9 @@ andNumberOfGreens:(NSInteger)in_regulation {
  @param hole_number
  */
 - (void) removeHoleNumber:(NSInteger)hole_number{
-    for (Hole *hole in holes_for_round){
+    for (Hole *hole in self.holes_for_round){
         if(hole.hole_number == hole_number)
-            [holes_for_round removeObject:hole];
+            [self.holes_for_round removeObject:hole];
     }
 }
 
