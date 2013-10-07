@@ -37,6 +37,8 @@
         [statsTableVC.tabBarItem setTitle:@"Courses"];
         [statsTableVC.tabBarItem setTag:1];
     }
+
+    return self;
 }
 
 - (void)viewDidLoad

@@ -75,8 +75,8 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    self.new_round = [[Round alloc] init];
-    self.new_hole = [[Hole alloc] init];
+    self.the_new_round = [[Round alloc] init];
+    self.the_new_hole = [[Hole alloc] init];
     [self setRoundVariables];
     [self setupDataSources];
 }
@@ -100,16 +100,16 @@
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if(self.new_hole.score != 0){
+    if(self.the_new_hole.score != 0){
         printf("%d", self.hole_number);
-        self.new_hole.hole_number = self.hole_number;
-        [self.new_round removeHoleNumber:self.hole_number];
-        [self.new_round.holes_for_round addObject:self.new_hole];
-        self.new_hole = nil;
+        self.the_new_hole.hole_number = self.hole_number;
+        [self.the_new_round removeHoleNumber:self.hole_number];
+        [self.the_new_round.holes_for_round addObject:self.the_new_hole];
+        self.the_new_hole = nil;
     }
     
-    if (self.new_hole == nil)
-        self.new_hole = [[Hole alloc] init];
+    if (self.the_new_hole == nil)
+        self.the_new_hole = [[Hole alloc] init];
 }
 
 
@@ -180,7 +180,7 @@
     HoleInputController *hole_input = [self.storyboard instantiateViewControllerWithIdentifier:@"hole_input"];
     self.hole_number = indexPath.row + 1;
     
-    Hole *current_hole = [self.new_round findHoleNumber:(NSInteger)self.hole_number];
+    Hole *current_hole = [self.the_new_round findHoleNumber:(NSInteger)self.hole_number];
     
     hole_input.putt_nummber   = [NSString stringWithFormat:@"%d", current_hole.putts];
     hole_input.penalty_number = [NSString stringWithFormat:@"%d", current_hole.penalties];
@@ -214,7 +214,7 @@
 - (IBAction) save_button:(id)sender{
     Course *course = [self.singleton.player_data objectForKey:self.course_name];
     
-    [course.rounds_for_course addObject:self.new_round];
+    [course.rounds_for_course addObject:self.the_new_round];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -228,7 +228,7 @@
  */
 - (void)addItemViewController:(HoleInputController *)controller didFinishEnteringScore:(NSInteger)item
 {
-    self.new_hole.score += item;
+    self.the_new_hole.score += item;
 }
 
 
@@ -240,7 +240,7 @@
  */
 - (void)addItemViewController:(HoleInputController *)controller didFinishEnteringPutts:(NSInteger)item
 {
-    self.new_hole.putts += item;
+    self.the_new_hole.putts += item;
 }
 
 
@@ -252,7 +252,7 @@
  */
 - (void)addItemViewController:(HoleInputController *)controller didFinishEnteringFairway:(NSInteger)item
 {
-    self.new_hole.fairway += item;
+    self.the_new_hole.fairway += item;
 }
 
 
@@ -264,7 +264,7 @@
  */
 - (void) addItemViewController:(HoleInputController *)controller didFinishEnteringPenalty:(NSInteger)item
 {
-    self.new_hole.penalties += item;
+    self.the_new_hole.penalties += item;
 }
 
 
@@ -276,7 +276,7 @@
  */
 - (void) addItemViewController:(HoleInputController *)controller didFinishEnteringGreen:(NSInteger)item
 {
-    self.new_hole.green_in_regulation += item;
+    self.the_new_hole.green_in_regulation += item;
 }
 
 @end
