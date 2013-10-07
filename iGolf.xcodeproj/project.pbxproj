@@ -127,6 +127,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C68836BF180283F0005BA068 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6E532C61723B29100442CBE /* CourseSelectionController.h */,
+				C6E532C71723B29100442CBE /* CourseSelectionController.m */,
+				C6F55B81171F2D4500D2D6A3 /* AddCourseController.h */,
+				C6F55B82171F2D4500D2D6A3 /* AddCourseController.m */,
+				C64CE735171E076300DEA5A8 /* HoleTableController.h */,
+				C64CE736171E076300DEA5A8 /* HoleTableController.m */,
+				C64CE73B171E4C4100DEA5A8 /* HoleInputController.h */,
+				C64CE73C171E4C4100DEA5A8 /* HoleInputController.m */,
+				C64CE732171DD9F100DEA5A8 /* DisplayStatViewController.h */,
+				C64CE733171DD9F100DEA5A8 /* DisplayStatViewController.m */,
+				C64CE72F171DCDC400DEA5A8 /* TableOfStats.h */,
+				C64CE730171DCDC400DEA5A8 /* TableOfStats.m */,
+				C6E532C91723C25900442CBE /* MasterTabController.h */,
+				C6E532CA1723C25900442CBE /* MasterTabController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C68836C018028419005BA068 /* Helper files */ = {
+			isa = PBXGroup;
+			children = (
+				C65FDC1E1728958700C0652A /* Hole.h */,
+				C65FDC1F1728958700C0652A /* Hole.m */,
+				C6A69B4B1716881000589040 /* Round.h */,
+				C6A69B4C1716881000589040 /* Round.m */,
+				C6A69B45171680A100589040 /* Course.h */,
+				C6A69B46171680A100589040 /* Course.m */,
+				C6AA449716F98F2D00796275 /* StatisticAnlaysis.h */,
+				C6AA449816F98F2D00796275 /* StatisticAnlaysis.m */,
+				C6BD7EEB17224A0F00B7C668 /* Singleton.h */,
+				C6BD7EEC17224A0F00B7C668 /* Singleton.m */,
+			);
+			name = "Helper files";
+			sourceTree = "<group>";
+		};
 		C6F256E216F8E4F0001839F7 = {
 			isa = PBXGroup;
 			children = (
@@ -161,33 +199,11 @@
 		C6F256F416F8E4F0001839F7 /* iGolf */ = {
 			isa = PBXGroup;
 			children = (
-				C65FDC1E1728958700C0652A /* Hole.h */,
-				C65FDC1F1728958700C0652A /* Hole.m */,
-				C6A69B4B1716881000589040 /* Round.h */,
-				C6A69B4C1716881000589040 /* Round.m */,
-				C6A69B45171680A100589040 /* Course.h */,
-				C6A69B46171680A100589040 /* Course.m */,
-				C6AA449716F98F2D00796275 /* StatisticAnlaysis.h */,
-				C6AA449816F98F2D00796275 /* StatisticAnlaysis.m */,
+				C68836C018028419005BA068 /* Helper files */,
+				C68836BF180283F0005BA068 /* Controllers */,
 				C6F256FD16F8E4F0001839F7 /* AppDelegate.h */,
 				C6F256FE16F8E4F0001839F7 /* AppDelegate.m */,
-				C6E532C91723C25900442CBE /* MasterTabController.h */,
-				C6E532CA1723C25900442CBE /* MasterTabController.m */,
 				C6F2570616F8E4F0001839F7 /* MainStoryboard.storyboard */,
-				C6BD7EEB17224A0F00B7C668 /* Singleton.h */,
-				C6BD7EEC17224A0F00B7C668 /* Singleton.m */,
-				C6E532C61723B29100442CBE /* CourseSelectionController.h */,
-				C6E532C71723B29100442CBE /* CourseSelectionController.m */,
-				C6F55B81171F2D4500D2D6A3 /* AddCourseController.h */,
-				C6F55B82171F2D4500D2D6A3 /* AddCourseController.m */,
-				C64CE735171E076300DEA5A8 /* HoleTableController.h */,
-				C64CE736171E076300DEA5A8 /* HoleTableController.m */,
-				C64CE73B171E4C4100DEA5A8 /* HoleInputController.h */,
-				C64CE73C171E4C4100DEA5A8 /* HoleInputController.m */,
-				C64CE732171DD9F100DEA5A8 /* DisplayStatViewController.h */,
-				C64CE733171DD9F100DEA5A8 /* DisplayStatViewController.m */,
-				C64CE72F171DCDC400DEA5A8 /* TableOfStats.h */,
-				C64CE730171DCDC400DEA5A8 /* TableOfStats.m */,
 				C6F256F516F8E4F0001839F7 /* Supporting Files */,
 			);
 			path = iGolf;
