@@ -8,6 +8,8 @@
 
 #import "MasterTabController.h"
 #import "Singleton.h"
+#import "CourseSelectionController.h"
+#import "TableOfStats.h"
 
 @implementation MasterTabController
 
@@ -18,6 +20,23 @@
         // Custom initialization
     }
     return self;
+}
+
+
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        CourseSelectionController *courseVC = [[CourseSelectionController alloc] init];
+        [courseVC.tabBarItem setImage:[UIImage imageNamed:@"first.png"]];
+        [courseVC.tabBarItem setTitle:@"Courses"];
+        [courseVC.tabBarItem setTag:0];
+        
+        TableOfStats *statsTableVC = [[TableOfStats alloc] init];
+        [statsTableVC.tabBarItem setImage:[UIImage imageNamed:@"second.png"]];
+        [statsTableVC.tabBarItem setTitle:@"Courses"];
+        [statsTableVC.tabBarItem setTag:1];
+    }
 }
 
 - (void)viewDidLoad
